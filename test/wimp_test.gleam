@@ -1,12 +1,16 @@
-import gleeunit
-import gleeunit/should
+import wimp.{Credentials}
+import gleam/result.{try}
+import gleam/hackney
+import gleam/io
 
+/// You can do this!!
 pub fn main() {
-  gleeunit.main()
-}
+    let request = Credentials(token: "token123", user: "user123")
+      |> wimp.make_notification_request
+      |> hackney.send
 
-// gleeunit test functions end in `_test`
-pub fn hello_world_test() {
-  1
-  |> should.equal(1)
+    use res <- try(request)
+    io.debug(res)
+
+    Ok(Nil)
 }

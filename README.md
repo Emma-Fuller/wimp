@@ -3,13 +3,7 @@
 [![Package Version](https://img.shields.io/hexpm/v/wimp)](https://hex.pm/packages/wimp)
 [![Hex Docs](https://img.shields.io/badge/hex-docs-ffaff3)](https://hexdocs.pm/wimp/)
 
-## Quick start
-
-```sh
-gleam run   # Run the project
-gleam test  # Run the tests
-gleam shell # Run an Erlang shell
-```
+Wimp is a library for interacting with the [Pushover](https://pushover.net/) API.
 
 ## Installation
 
